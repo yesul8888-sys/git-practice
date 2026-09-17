@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>홍길동 포트폴리오</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="logo">홍길동 포트폴리오</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">자기소개</a></li>
+        <li><a href="#works">작업물</a></li>
+        <li><a href="#login">로그인</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 자기소개 -->
+    <section id="about">
+      <h2>자기소개</h2>
+      <p>디자이너 홍길동입니다. 이곳에 소개 문구가 들어갑니다.</p>
+    </section>
+
+    <!-- 작업물 목록 -->
+    <section id="works">
+      <h2>작업물</h2>
+      <ul class="work-list">
+        <!-- 작업물 카드는 추후 동적으로 렌더링 예정 -->
+        <li class="work-item">
+          <a href="#work-detail">
+            <img src="" alt="작업물 썸네일" />
+            <p class="work-title">작업물 제목</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 작업물 상세 -->
+    <section id="work-detail" hidden>
+      <h2 class="work-detail-title">작업물 제목</h2>
+      <img class="work-detail-image" src="" alt="작업물 이미지" />
+      <p class="work-detail-description">작업물 설명이 들어갑니다.</p>
+    </section>
+
+    <!-- 로그인 -->
+    <section id="login" hidden>
+      <h2>로그인</h2>
+      <form>
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">로그인</button>
+      </form>
+    </section>
+
+    <!-- 관리자 전용: 작업물 등록/수정/삭제 -->
+    <section id="admin" hidden>
+      <h2>작업물 관리</h2>
+      <form id="work-form">
+        <label for="work-title">제목</label>
+        <input type="text" id="work-title" name="title" required />
+
+        <label for="work-description">설명</label>
+        <textarea id="work-description" name="description"></textarea>
+
+        <label for="work-image">이미지</label>
+        <input type="file" id="work-image" name="image" />
+
+        <button type="submit">등록</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 홍길동. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
